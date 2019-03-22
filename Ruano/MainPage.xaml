@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:Ruano" x:Class="Ruano.MainPage">
+    <StackLayout>
+        <Label Text="Ruano formación" 
+               HorizontalOptions="Center" 
+               VerticalOptions="CenterAndExpand" />
+        <Button>
+              <Button.Text>
+                <OnPlatform x:TypeArguments="x:String">
+                  <On Platform="iOS" Value="Button in iOS" />
+                  <On Platform="Android" Value="Button in Android" />
+                </OnPlatform>
+              </Button.Text>
+        </Button>
+        
+        <Button Text="I'm the best button">
+            <Button.IsVisible>
+                <OnPlatform x:TypeArguments="x:Boolean">
+                    <On Platform="iOS" Value="True" />
+                    <On Platform="Android" Value="False" />
+                </OnPlatform>
+            </Button.IsVisible>
+        </Button>
+    </StackLayout>
+</ContentPage>
