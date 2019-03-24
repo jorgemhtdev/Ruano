@@ -1,4 +1,4 @@
-﻿using System;
+﻿using Ruano.View;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -11,7 +11,9 @@ namespace Ruano
         {
             InitializeComponent();
 
-            MainPage = new DisplayingPopUpsView();
+            //MainPage = new DisplayingPopUpsView();
+
+            MainPage = new NavigationPage(new LoginView());
         }
 
         protected override void OnStart()

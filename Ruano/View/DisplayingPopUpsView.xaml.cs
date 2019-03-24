@@ -1,13 +1,12 @@
-﻿namespace Ruano
+﻿namespace Ruano.View
 {
     using Xamarin.Forms;
- 
-       public partial class DisplayingPopUpsView : ContentPage
+
+    public partial class DisplayingPopUpsView : ContentPage
     {
         public DisplayingPopUpsView()
         {
             InitializeComponent();
-
             BindingContext = new DisplayingPopUpsViewModel();
         }
     }
