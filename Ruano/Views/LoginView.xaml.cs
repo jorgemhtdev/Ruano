@@ -1,6 +1,6 @@
-﻿namespace Ruano.View
+﻿namespace Ruano.Views
 {
-    using Ruano.ViewModel;
+    using Ruano.ViewModels;
     using Xamarin.Forms;
 
     public partial class LoginView : ContentPage

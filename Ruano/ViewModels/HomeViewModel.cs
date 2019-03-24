@@ -1,4 +1,4 @@
-﻿namespace Ruano.ViewModel
+﻿namespace Ruano.ViewModels
 {
     public class HomeViewModel
     {

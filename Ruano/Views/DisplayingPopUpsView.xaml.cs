@@ -1,5 +1,6 @@
-﻿namespace Ruano.View
+﻿namespace Ruano.Views
 {
+    using Ruano.ViewModels;
     using Xamarin.Forms;
 
     public partial class DisplayingPopUpsView : ContentPage

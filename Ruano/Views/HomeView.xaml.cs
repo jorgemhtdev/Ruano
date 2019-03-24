@@ -1,4 +1,4 @@
-﻿namespace Ruano.View
+﻿namespace Ruano.Views
 {
     using Xamarin.Forms;
 

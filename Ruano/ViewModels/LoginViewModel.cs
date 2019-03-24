@@ -1,7 +1,7 @@
-﻿namespace Ruano.ViewModel
+﻿namespace Ruano.ViewModels
 {
     using System.Windows.Input;
-    using Ruano.View;
+    using Ruano.Views;
     using Xamarin.Forms;
 
     public class LoginViewModel

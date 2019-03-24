@@ -1,4 +1,4 @@
-﻿namespace Ruano
+﻿namespace Ruano.ViewModels
 {
     using System.ComponentModel;
     using System.Runtime.CompilerServices;
