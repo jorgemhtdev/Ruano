@@ -1,28 +1,69 @@
 ﻿namespace Ruano.ViewModels
 {
+    using System.Threading.Tasks;
     using System.Windows.Input;
+    using Ruano.Models;
+    using Ruano.Utils;
+    using Ruano.ViewModels.Base;
     using Ruano.Views;
     using Xamarin.Forms;
 
-    public class LoginViewModel
+    public class LoginViewModel : ViewModelBase
     {
-        public ICommand DisplayCommand => new Command(Display);
-        public ICommand DisplayActionCommand => new Command(DisplayAction);
-        public ICommand DisplayActionSheetCommand => new Command(DisplayActionSheet);
+        private string _image;
+        private string _email;
+        private string _password;
 
-        public async void Display()
+        public string Image
         {
-            await Application.Current.MainPage.Navigation.PushAsync(new HomeView());
+            get => _image;
+            set
+            {
+                _image = value;
+                OnPropertyChanged();
+            }
         }
 
-        public async void DisplayAction()
+        public string Email
         {
-
+            get => _email;
+            set
+            {
+                _email = value;
+                OnPropertyChanged();
+            }
         }
 
-        public async void DisplayActionSheet()
+        public string Password
         {
+            get => _password;
+            set
+            {
+                _password = value;
+                OnPropertyChanged();
+            }
+        }
 
+        public ICommand TabpageCommand => new AsyncCommand(Tabpage);
+        public ICommand MasterDetailPageCommand => new AsyncCommand(MasterDetailPage);
+
+        private async Task Tabpage() => await LoginAsync(new TabpageView());
+
+        private async Task MasterDetailPage() => await LoginAsync(new MasterDetailView());
+
+        private async Task LoginAsync(Page page)
+        {
+            Login login = new Login
+            {
+                Email = Email,
+                Password = Password
+            };
+
+            AppSettings.Login = true;
+
+            Application.Current.MainPage = page;
+
+            await Task.FromResult(true);
         }
     }
 }

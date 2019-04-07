@@ -12,9 +12,16 @@ namespace Ruano
         {
             InitializeComponent();
 
-            //MainPage = new DisplayingPopUpsView();
+            if (AppSettings.Login) 
+            {
+                MainPage = new MasterDetailView();
+            }
+            else
+            {
+                MainPage = new LoginView();
+            }
 
-            MainPage = new NavigationPage(new LoginView());
+           
         }
 
         protected override void OnStart()

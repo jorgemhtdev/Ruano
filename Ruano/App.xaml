@@ -4,67 +4,7 @@
              x:Class="Ruano.App">
     <Application.Resources>
         <ResourceDictionary>    
-            <!-- Colors -->
-            <Color x:Key="RedColor">#f7323f</Color>
-            <Color x:Key="WhiteColor">#fff</Color>
-            <Color x:Key="BlackColor">#000</Color>
-            <Color x:Key="GrayColor">#b5b5b5</Color>
-            <Color x:Key="GrayStrongColor">#1a1a1a</Color>
-            <Color x:Key="GrayNavigationColor">#1a1a1a</Color>
-            
-            <!-- Fonts -->
-           <OnPlatform x:Key="TextMeOneRegular" 
-                       x:TypeArguments="x:String">
-                       <On Platform="Android" Value="TextMeOne-Regular.ttf#TextMeOne-Regular" />
-                       <On Platform="iOS" Value="TextMeOne-Regular" />
-            </OnPlatform>
-            <OnPlatform x:Key="MontserratRegular" 
-                        x:TypeArguments="x:String">
-                        <On Platform="Android" Value="Montserrat-Regular.ttf#Montserrat-Regular" />
-                        <On Platform="iOS" Value="Montserrat-Regular" />
-            </OnPlatform>
-            <OnPlatform x:Key="MontserratLight" 
-                        x:TypeArguments="x:String">
-                        <On Platform="Android" Value="Montserrat-Light.ttf#Montserrat-Light" />
-                        <On Platform="iOS" Value="Montserrat-Light" />
-            </OnPlatform>
-            <OnPlatform x:Key="Montserrat-SemiBold"
-                        x:TypeArguments="x:String">
-                        <On Platform="Android" Value="Montserrat-SemiBold.ttf#Montserrat-SemiBold" />
-                        <On Platform="iOS" Value="Montserrat-SemiBold" />
-            </OnPlatform>
-            <OnPlatform x:Key="Montserrat-Black" 
-                        x:TypeArguments="x:String">
-                        <On Platform="Android" Value="Montserrat-Black.ttf#Montserrat-Black" />
-                        <On Platform="iOS" Value="Montserrat-Black" />
-            </OnPlatform>
-            <OnPlatform x:Key="Montserrat-Bold" 
-                        x:TypeArguments="x:String">
-                        <On Platform="Android" Value="Montserrat-Bold.ttf#Montserrat-Bold" />
-                        <On Platform="iOS" Value="Montserrat-Bold" />
-            </OnPlatform>
-            <OnPlatform x:Key="Montserrat-Medium" 
-                        x:TypeArguments="x:String">
-                        <On Platform="Android" Value="Montserrat-Medium.ttf#Montserrat-Medium" />
-                        <On Platform="iOS" Value="Montserrat-Medium" />
-            </OnPlatform>
-            
-            <!-- Styles -->
-            <Style TargetType="NavigationPage">
-                <Setter Property="BarBackgroundColor" Value="{StaticResource GrayNavigationColor}"/>
-                <Setter Property="BarTextColor" Value="{StaticResource WhiteColor}"/>
-            </Style>
-          
-           <Style TargetType="{x:Type ActivityIndicator}">
-                <Setter Property="VerticalOptions" Value="Center" />
-                <Setter Property="HorizontalOptions" Value="Center" />
-                <Setter Property="Color" Value="{StaticResource RedColor}" />
-                <Setter Property="WidthRequest" Value="150" />
-            </Style>
 
-            <Style TargetType="{x:Type ListView}">
-                <Setter Property="SeparatorVisibility" Value="None" />
-            </Style>
         </ResourceDictionary>
     </Application.Resources>
 </Application>

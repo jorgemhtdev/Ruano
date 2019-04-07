@@ -2,6 +2,54 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
              x:Class="Ruano.Views.HomeView">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Order="Primary" 
+                     Command="{Binding SearchToolbarItemCommand}"
+                     Icon="ic_navigationSearch"
+                     Priority="0" />
+    </ContentPage.ToolbarItems>
     <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0">
+                <SearchBar 
+                    x:Name="SearchBar"
+                    BackgroundColor="Transparent"
+                    Text="{Binding SearchBar}"
+                    IsVisible="{Binding IsVisible}" />
+            </Grid>
+            <Grid Grid.Row="1">
+                <ListView 
+                    ItemsSource="{Binding Superheros, Mode=TwoWay}"
+                    RowHeight="150" 
+                    Margin="15,10"   
+                    CachingStrategy="RecycleElement"
+                    SeparatorVisibility="None">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Grid Margin="0,10">
+                                    <Grid.ColumnDefinitions>
+                                      <ColumnDefinition Width="3*"/>
+                                      <ColumnDefinition Width="7*" />  
+                                    </Grid.ColumnDefinitions>
+                                    
+                                    <Image Grid.Column="0" Source="{Binding Photo}" />
+                                    <Grid Grid.Column="1" BackgroundColor="SpringGreen" >
+                                        <StackLayout VerticalOptions="Center"> 
+                                            <Label Text="{Binding Name}" />
+                                            <Label Text="{Binding Power}" />
+                                        </StackLayout>
+                                    </Grid>
+                                </Grid>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </Grid>
+        </Grid>
     </ContentPage.Content>
 </ContentPage>

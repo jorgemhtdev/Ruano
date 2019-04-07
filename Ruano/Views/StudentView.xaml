@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Ruano.Views.StudentView"
+             xmlns:Templates="clr-namespace:Ruano.Views.Templates"
+             xmlns:behaviors="clr-namespace:Ruano.Behaviors">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="CenterAndExpand">
+            <Label Text="Lista" />
+            <ListView 
+                BackgroundColor="Chocolate"
+                ItemsSource="{Binding Students, Mode=TwoWay}"
+                RowHeight="150" 
+                Margin="15,10"   
+                CachingStrategy="RecycleElement"
+                SeparatorVisibility="None"
+                behaviors:ItemTappedCommandListView.ItemTappedCommand="{Binding StudentItemCommand}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Templates:PeopleTemplate />
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>

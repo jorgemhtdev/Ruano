@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             xmlns:Templates="clr-namespace:Ruano.Views.Templates"
+             x:Class="Ruano.Views.MenuView"
+             ios:Page.UseSafeArea="true">
+    <ContentPage.Content>
+        
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="250"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            
+            <Grid Grid.Row="0" BackgroundColor=" Chocolate">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="50"/>
+                </Grid.RowDefinitions>
+                
+                <Button Grid.Row="0" Command="{Binding SettingsCommand}" Text="Ajustes" Margin="0,0,10,0" HorizontalOptions="EndAndExpand"/>
+                
+                <Image Grid.Row="1" Source="{Binding PhotoUser}" 
+                       Aspect="AspectFit">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer
+                                    Command="{Binding PhotoCommand}"
+                                    NumberOfTapsRequired="1" />
+                      </Image.GestureRecognizers>
+                </Image>   
+                
+                <Label Grid.Row="2"
+                       HorizontalOptions="Center" 
+                       VerticalOptions="Center" 
+                       Text="Nombre" />
+            </Grid>
+            
+            <Grid Grid.Row="1">
+                <ListView 
+                    ItemsSource="{Binding Menu, Mode=TwoWay}"
+                    RowHeight="150" 
+                    Margin="15,10"   
+                    CachingStrategy="RecycleElement"
+                    SeparatorVisibility="None">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Templates:MenuTemplate />
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
