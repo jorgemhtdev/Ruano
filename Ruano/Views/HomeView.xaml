@@ -36,7 +36,6 @@
                                       <ColumnDefinition Width="3*"/>
                                       <ColumnDefinition Width="7*" />  
                                     </Grid.ColumnDefinitions>
-                                    
                                     <Image Grid.Column="0" Source="{Binding Photo}" />
                                     <Grid Grid.Column="1" BackgroundColor="SpringGreen" >
                                         <StackLayout VerticalOptions="Center"> 

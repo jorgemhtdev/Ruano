@@ -3,31 +3,31 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Ruano.Views.ExampleBindingView">
     <ContentPage.Content>
-    <StackLayout>
-        <Label Text="{Binding Name}" 
-               TextColor="Chocolate"
-               HorizontalOptions="Center" 
-               VerticalOptions="CenterAndExpand" />
-        
-        <!-- 
-        <Entry Text="{Binding Name, Mode=OneWay}"  />
-        <Entry Text="{Binding Name, Mode=OneWayToSource}"  /> -->
-        <Entry Text="{Binding Name, Mode=TwoWay}"  />
+        <StackLayout>
+            <Label Text="{Binding Name}" 
+                   TextColor="Chocolate"
+                   HorizontalOptions="Center" 
+                   VerticalOptions="CenterAndExpand" />
             
-       <!--     
-        <Slider x:Name="scaleSlider"
-            BindingContext="{x:Reference label}"
-            Maximum="10"
-            Value="{Binding Scale, Mode=TwoWay}" />
+            <!-- 
+            <Entry Text="{Binding Name, Mode=OneWay}"  />
+            <Entry Text="{Binding Name, Mode=OneWayToSource}"  /> -->
+            <Entry Text="{Binding Name, Mode=TwoWay}"  />
+                
+           <!--     
+            <Slider x:Name="scaleSlider"
+                BindingContext="{x:Reference label}"
+                Maximum="10"
+                Value="{Binding Scale, Mode=TwoWay}" />
 
-        <Label x:Name="label"
-           Text="TEXT"
-           HorizontalOptions="Center"
-           VerticalOptions="Center" 
-           BackgroundColor="Green"
-           Scale="{Binding Value, Source={x:Reference scaleSlider}, Mode=TwoWay}"/> -->
-            
-        <Button Text="Enviar" Command="{Binding SaveCommand}" />     
-    </StackLayout>
+            <Label x:Name="label"
+               Text="TEXT"
+               HorizontalOptions="Center"
+               VerticalOptions="Center" 
+               BackgroundColor="Green"
+               Scale="{Binding Value, Source={x:Reference scaleSlider}, Mode=TwoWay}"/> -->
+                
+            <Button Text="Enviar" Command="{Binding SaveCommand}" />     
+        </StackLayout>
     </ContentPage.Content>
 </ContentPage>

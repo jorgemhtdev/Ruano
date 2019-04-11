@@ -20,8 +20,6 @@ namespace Ruano
             {
                 MainPage = new LoginView();
             }
-
-           
         }
 
         protected override void OnStart()

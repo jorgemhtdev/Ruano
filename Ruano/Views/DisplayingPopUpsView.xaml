@@ -4,9 +4,9 @@
              x:Class="Ruano.Views.DisplayingPopUpsView">
     <ContentPage.Content>
         <StackLayout VerticalOptions="CenterAndExpand" >
-             <Button Text="Display alert" Command="{Binding DisplayCommand}" /> 
-             <Button Text="Display Action Boolean" Command="{Binding DisplayActionCommand}" />
-             <Button Text="Display Action Sheet" Command="{Binding DisplayActionSheetCommand}" /> 
+            <Button Text="Display alert" Command="{Binding DisplayCommand}" /> 
+            <Button Text="Display Action Boolean" Command="{Binding DisplayActionCommand}" />
+            <Button Text="Display Action Sheet" Command="{Binding DisplayActionSheetCommand}" /> 
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
